@@ -1,0 +1,206 @@
+﻿:root {
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+    --gris: #e1e1e1;
+    --blanco: #ffffff;
+    --negro: #000000;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--fuenteHeading);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 3.2rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 2.8rem;
+}
+
+.nav-bg {
+    background-color: rgb(77, 20, 140);
+}
+
+.Hero {
+    position:relative;
+    background-image: url(../imagenes/Hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+   
+}
+
+.Hero2 {
+    position: relative;
+    background-image: url(../imagenes/Hero2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+}
+.contenido-hero {
+    background-color: rgba(0, 0, 0, .7);
+    justify-content: center;
+    height: 100%;
+    
+}
+.formulario{
+    width:80%;
+}
+
+@media (min-width: 768px) {
+    .formulario {
+        width: 50%;
+    }
+}
+
+
+
+.campos {
+    height: auto;
+}
+
+.campos button {
+    height: 100%;
+    width: 100%;
+    height: 50px;
+}
+
+@media (min-width: 768px) {
+    .campos button {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+/*.row{
+    border: 1px solid red;
+
+}
+.col {
+    border: 1px solid red;
+}*/
+
+.artic {
+    border-bottom: 1px solid var(--gris);
+    padding-bottom: 1rem;
+}
+
+.artic-image {
+    height: 400px;
+    
+}
+
+.artic-image .der{
+    height: 400px;
+}
+
+@media (min-width: 768px) {
+    .artic-image {
+        height: auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .artic-image {
+        height: 400px;
+    }
+}
+
+.artic-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.artic-title h2 {
+    font-weight: bold;
+    border-bottom: 1px solid var(--gris);
+    padding-bottom: 2rem;
+}
+
+.box-text {
+    
+    margin: 1rem 0 1rem 0;
+    padding: 1rem;
+    background: white;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 1px 0px 17px -2px rgba(0,0,0,0.75);
+    height: auto;
+}
+
+
+@media (min-width: 768px) {
+    .box-text {
+        margin: .5rem 0 .5rem -2rem;
+        
+    }
+}
+
+.box-text2 {
+    position:relative;
+    margin: 1rem 0 1rem 0;
+    padding: 1rem;
+    background: white;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 1px 0px 17px -2px rgba(0,0,0,0.75);
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .box-text2 {
+        margin: .5rem -2rem .5rem 0;
+    }
+}
+
+
+
+.img-logo{
+    height: 50px;
+    width: auto;
+}
+
+.button-icon {
+    border: none;
+    background-color: transparent;
+}
+.button-icon:focus {
+    border: none;
+    box-shadow: none;
+}
+
+.button-icon svg {
+    height: 40px;
+    width: 40px;
+    color: white;
+}
+
+.titulo-b {
+    
+    height: 50px;
+    margin: auto;
+
+}
+
+.titulo-b h2 {
+    padding-bottom: 10px;
+    border-bottom: solid;
+    margin: auto;
+    width: 60%;
+}

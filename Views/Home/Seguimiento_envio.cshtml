@@ -1,0 +1,80 @@
+﻿@model BusquedaPaquete
+@{
+    ViewData["Title"] = "Seguimineto_Envio";
+}
+
+<section class="Hero2 p-0 m-0">
+    <div class="contenido-hero text-white text-center p-0 m-0 align-content-center">
+        <div class="titulo-b row">
+            <h2 class=""><b>Seguimiento de envío</b></h2>
+        </div>
+        <div class="row text-hero mt-sm-0 mt-4 m-0">
+            <p class="p-0 m-0">Aquí puedes consultar el estado de tu envío en tiempo real.</p>
+        </div>
+    </div>
+</section>
+
+<div class="text-center container mt-5">
+    <h3 class="alert-info alert"> Tu ID: <span>@Model.IdEnvio</span></h3>
+    <div class="mt-5">
+        <div class="row">
+            <div class="col-md">
+                <img class="img-fluid" src="~/imagenes/icono1_color.png" />
+
+                <p class="fw-bold">Recibido por StellarShip Express</p>
+                
+            </div>
+
+            <div class="col-md"> 
+                @if (Model.Estatus == "En tránsito a sucursal" || Model.Estatus == "Recibido en Sucursal" || Model.Estatus == "En proceso de entrega" || Model.Estatus == "Paquete entregado")
+                {
+                    <img class="img-fluid" src="~/imagenes/icono2_color.png" />
+                }else{
+                <img class="img-fluid" src="~/imagenes/icono2_gris.png" />}
+
+                <p class="fw-bold">En tránsito a sucursal: Tu paquete ha salido de nuestro Proceso Central y se dirige a tu ciudad.</p>
+            </div>
+
+            <div class="col-md">
+                @if (Model.Estatus == "Recibido en Sucursal" || Model.Estatus == "En proceso de entrega" || Model.Estatus == "Paquete entregado")
+                {
+                    <img class="img-fluid" src="~/imagenes/icono3_color.png" />
+                }
+                else
+                {
+                    <img class="img-fluid" src="~/imagenes/icono3_gris.png" />
+                }
+                
+
+                <p class="fw-bold">Recibido en Sucursal: Tu pedido ha llegado a sucursal destino. Pronto será asignado a un mensajero</p>
+            </div>
+
+            <div class="col-md">
+                @if (Model.Estatus == "En proceso de entrega" || Model.Estatus == "Paquete entregado")
+                {
+                    <img class="img-fluid" src="~/imagenes/icono4_color.png" />
+                }
+                else
+                {
+                    <img class="img-fluid" src="~/imagenes/icono4_gris.png" />
+                }
+
+                <p class="fw-bold">En proceso de entrega: Tu paquete se le ha asignado a uno de nuestros Colaboradores para su entrega.</p>
+            </div>
+
+            <div class="col-md">
+                @if (Model.Estatus == "Paquete entregado")
+                {
+                    <img class="img-fluid" src="~/imagenes/icono5_color.png" />
+                }
+                else
+                {
+                    <img class="img-fluid" src="~/imagenes/icono5_gris.png" />
+                }
+
+                <p class="fw-bold">Paquete entregado.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
